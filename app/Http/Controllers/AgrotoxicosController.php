@@ -61,4 +61,97 @@ class AgrotoxicosController extends Controller
             'res' => 'Deletado com sucesso'
         ], 201);
     }
+
+
+
+
+    // CONTROLLERS DA APLICAÇÃO WEB //
+    public function agrotoxicosindex()
+    {
+        $agro = Agrotoxicos::all();
+        return view('agrotoxicos', compact('agro'));
+    }
+
+    public function create()
+    {
+        return view('agrotoxicocreate');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function agrotoxicostore(Request $request)
+    {
+        $agro = new Agrotoxicos();
+        $agro->cultura        = $request->input('cultura');
+        $agro->canteiro       = $request->input('canteiro');
+        $agro->date           = $request->input('date');
+        $agro->produto        = $request->input('produto');
+        $agro->aplicacao      = $request->input('aplicacao');
+        $agro->dosagem        = $request->input('dosagem');
+        $agro->volume         = $request->input('volume');
+        $agro->indicacao      = $request->input('indicacao');
+        $agro->carencia       = $request->input('carencia');
+        $agro->save();
+        return redirect('/agrotoxicos');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $agro = Agrotoxicos::find($id);
+        if (isset($agro)) {
+            return view('agrotoxicoedit', compact('agro'));
+        }
+        return redirect('/agrotoxicos');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function agrotoxicoupdate(Request $request, $id)
+    {
+        $agro = Agrotoxicos::find($id);
+        if (isset($agro)) {
+            $agro->cultura        = $request->input('cultura');
+            $agro->canteiro       = $request->input('canteiro');
+            $agro->date           = $request->input('date');
+            $agro->produto        = $request->input('produto');
+            $agro->aplicacao      = $request->input('aplicacao');
+            $agro->dosagem        = $request->input('dosagem');
+            $agro->volume         = $request->input('volume');
+            $agro->indicacao      = $request->input('indicacao');
+            $agro->carencia       = $request->input('carencia');
+            $agro->save();
+        }
+        return redirect('/agrotoxicos');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $agro = Agrotoxicos::find($id);
+        if (isset($agro)) {
+            $agro->delete();
+        }
+
+        return redirect('/agrotoxicos');
+    }
 }

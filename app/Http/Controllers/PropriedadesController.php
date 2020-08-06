@@ -62,6 +62,8 @@ class PropriedadesController extends Controller
         ], 201);
     }
 
+
+
     // CONTROLLERS DA APLICAÇÃO WEB //
     public function propriedadesindex()
     {

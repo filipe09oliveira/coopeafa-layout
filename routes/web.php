@@ -31,3 +31,27 @@ Route::post('/propriedades', 'PropriedadesController@propriedadestore');
 Route::get('/propriedade/delete/{id}', 'PropriedadesController@destroy');
 Route::get('/propriedade/edit/{id}', 'PropriedadesController@edit');
 Route::post('/propriedade/{id}', 'PropriedadesController@propriedadeupdate');
+
+
+Route::get('/culturas', 'CulturasController@culturasindex');
+Route::get('/cultura/create', 'CulturasController@create');
+Route::post('/culturas', 'CulturasController@culturastore');
+Route::get('/cultura/delete/{id}', 'CulturasController@destroy');
+Route::get('/cultura/edit/{id}', 'CulturasController@edit');
+Route::post('/cultura/{id}', 'CulturasController@culturaupdate');
+
+
+Route::get('/agrotoxicos', 'AgrotoxicosController@agrotoxicosindex');
+Route::get('/agrotoxico/create', 'AgrotoxicosController@create');
+Route::post('/agrotoxicos', 'AgrotoxicosController@agrotoxicostore');
+Route::get('/agrotoxico/delete/{id}', 'AgrotoxicosController@destroy');
+Route::get('/agrotoxico/edit/{id}', 'AgrotoxicosController@edit');
+Route::post('/agrotoxico/{id}', 'AgrotoxicosController@agrotoxicoupdate');
+
+
+Route::get('/colheitas', 'ColheitasController@colheitasindex');
+Route::get('/colheita/create', 'ColheitasController@create');
+Route::post('/colheitas', 'ColheitasController@colheitastore');
+Route::get('/colheita/delete/{id}', 'ColheitasController@destroy');
+Route::get('/colheita/edit/{id}', 'ColheitasController@edit');
+Route::post('/colheita/{id}', 'ColheitasController@colheitaupdate');
