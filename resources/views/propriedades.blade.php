@@ -18,7 +18,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>CAFIR</th>
+                    <th>Nome Propriedade</th>
                     <th>Tipo</th>
                     <th>Tamanho</th>
                     <th>Rua</th>

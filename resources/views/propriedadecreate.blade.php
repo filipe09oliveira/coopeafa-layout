@@ -10,8 +10,8 @@
     <form action="/propriedades" method="POST">
         @csrf
         <div class="form-group">
-            <label for="cafir">CAFIR</label>
-            <input type="text" class="form-control" name="cafir" id="cafir" placeholder="CAFIR">
+            <label for="cafir">Nome da Porpriedade</label>
+            <input type="text" class="form-control" name="cafir" id="cafir" placeholder="Nome da Porpriedade">
         </div>
         <div class="form-group">
             <label for="tipo">Tipo</label>
