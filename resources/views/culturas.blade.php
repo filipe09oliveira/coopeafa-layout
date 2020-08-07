@@ -22,7 +22,7 @@
                     <th>Hectaries</th>
                     <th>Propriedade</th>
                     <th>Colheita</th>
-                    <th class="text-center w-25 p-3">Ações</th>
+                    <th class="text-center" style="width: auto">Ações</th>
                 </tr>
                 </thead>
                 <tbody>

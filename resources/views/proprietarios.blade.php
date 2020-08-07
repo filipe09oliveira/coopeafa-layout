@@ -23,7 +23,7 @@
                     <th>Numero DAP</th>
                     <th>Validade DAP</th>
                     <th>Resgistro</th>
-                    <th class="text-center w-25 p-3">Ações</th>
+                    <th class="text-center" style="width: auto">Ações</th>
                 </tr>
                 </thead>
                 <tbody>

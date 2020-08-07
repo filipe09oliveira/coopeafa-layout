@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="650f9b5d-0c95-400e-b9e7-13a3256952ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/agrotoxicos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agrotoxicos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/colheitas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/colheitas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/culturas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/culturas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/propriedades.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propriedades.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/proprietarios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/proprietarios.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -169,7 +174,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596736684258</updated>
-      <workItem from="1596736685395" duration="2533000" />
+      <workItem from="1596736685395" duration="3179000" />
+      <workItem from="1596799172587" duration="3083000" />
     </task>
     <servers />
   </component>

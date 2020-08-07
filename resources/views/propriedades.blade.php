@@ -22,10 +22,10 @@
                     <th>Tipo</th>
                     <th>Tamanho</th>
                     <th>Rua</th>
-                    <th>bairro</th>
+                    <th>Bairro</th>
                     <th>Numero</th>
                     <th>Contrato</th>
-                    <th class="text-center w-25 p-3">Ações</th>
+                    <th class="text-center" style="width: auto">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
