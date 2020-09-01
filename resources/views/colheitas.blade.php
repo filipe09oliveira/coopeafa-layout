@@ -13,7 +13,7 @@
 
     <!-- Content Row -->
     <div class="table-responsive">
-        @if(count($colhei) > 0)
+        @if(count($colhe) > 0)
             <table id="datatable" class="table table-striped table-bordered table-condensed" style="width:100%;">
                 <thead>
                 <tr>
@@ -29,19 +29,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($colhei as $colheis )
+                @foreach($colhe as $colhes )
                     <tr>
-                        <td>{{$colheis->id}}</td>
-                        <td>{{$colheis->produto}}</td>
-                        <td>{{$colheis->unidade}}</td>
-                        <td>{{$colheis->peso}}</td>
-                        <td>{{$colheis->quantidade}}</td>
-                        <td>{{$colheis->perda}}</td>
-                        <td>{{$colheis->transportador}}</td>
-                        <td>{{$colheis->comprador}}</td>
+                        <td>{{$colhes->id}}</td>
+                        <td>{{$colhes->produto}}</td>
+                        <td>{{$colhes->unidade}}</td>
+                        <td>{{$colhes->peso}}</td>
+                        <td>{{$colhes->quantidade}}</td>
+                        <td>{{$colhes->perda}}</td>
+                        <td>{{$colhes->transportador}}</td>
+                        <td>{{$colhes->comprador}}</td>
                         <td class="text-center">
-                            <a href="/colheita/edit/{{$colheis->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/colheita/delete/{{$colheis->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/colheita/edit/{{$colhes->id}}" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="/colheita/delete/{{$colhes->id}}" class="btn btn-sm btn-danger">Excluir</a>
                         </td>
                     </tr>
                 @endforeach

@@ -3,8 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="650f9b5d-0c95-400e-b9e7-13a3256952ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ColheitasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ColheitasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_201212_propriedades.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_202236_culturas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_202607_agrotoxicos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_27_203005_colheitas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script-for-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/script-for-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/colheitacreate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/colheitacreate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/colheitaedit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/colheitaedit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/colheitas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/colheitas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/propriedadecreate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propriedadecreate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/propriedades.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propriedades.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/propriedadeedit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propriedadeedit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/proprietariocreate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/proprietariocreate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/proprietarioedit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/proprietarioedit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +156,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,6 +164,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -172,11 +186,35 @@
       <option name="presentableId" value="Default" />
       <updated>1596736684258</updated>
       <workItem from="1596736685395" duration="3179000" />
-      <workItem from="1596799172587" duration="3871000" />
+      <workItem from="1596799172587" duration="4201000" />
+      <workItem from="1596830297703" duration="1058000" />
+      <workItem from="1596833227979" duration="221000" />
+      <workItem from="1596932547446" duration="602000" />
+      <workItem from="1597057582479" duration="92000" />
+      <workItem from="1597427141928" duration="2761000" />
+      <workItem from="1598969593376" duration="8199000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598990478663">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598990478663" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597057672954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597057672954" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1598970371747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1598970371747" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598990172344">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598990172344" />
   </component>
 </project>

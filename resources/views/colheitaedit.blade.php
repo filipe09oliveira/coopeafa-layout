@@ -8,39 +8,39 @@
 
     <hr class="sidebar-divider">
 
-    <form action="/proprietario/{{$colhei->id}}" method="POST">
+    <form action="/colheita/{{$colhe->id}}" method="POST">
         @csrf
         <div class="form-group">
             <label for="produto">Produtos</label>
-            <input type="text" class="form-control" name="produto" id="produto" value="{{$colhei->produto}}" placeholder="Produtos">
+            <input type="text" class="form-control" name="produto" id="produto" value="{{$colhe->produto}}" placeholder="Produtos">
         </div>
         <div class="form-group">
             <label for="unidade">Unidade</label>
-            <input type="text" class="form-control" name="unidade" id="unidade" value="{{$colhei->unidade}}"  placeholder="Unidade">
+            <input type="text" class="form-control" name="unidade" id="unidade" value="{{$colhe->unidade}}"  placeholder="Unidade">
         </div>
         <div class="form-group">
             <label for="peso">Peso</label>
-            <input type="text" class="form-control" name="peso" id="peso" value="{{$colhei->peso}}" placeholder="Peso">
+            <input type="text" class="form-control" name="peso" id="peso" value="{{$colhe->peso}}" placeholder="Peso">
         </div>
         <div class="form-group">
             <label for="quantidade">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="quantidade" value="{{$colhei->quantidade}}" placeholder="Quantidade">
+            <input type="text" class="form-control" name="quantidade" id="quantidade" value="{{$colhe->quantidade}}" placeholder="Quantidade">
         </div>
         <div class="form-group">
             <label for="perda">Perda</label>
-            <input type="text" class="form-control" name="perda" id="perda" value="{{$colhei->perda}}" placeholder="Perda">
+            <input type="text" class="form-control" name="perda" id="perda" value="{{$colhe->perda}}" placeholder="Perda">
         </div>
         <div class="form-group">
             <label for="transportador">Transportador</label>
-            <input type="text" class="form-control" name="transportador" id="transportador" value="{{$colhei->transportador}}" placeholder="Transportador">
+            <input type="text" class="form-control" name="transportador" id="transportador" value="{{$colhe->transportador}}" placeholder="Transportador">
         </div>
         <div class="form-group">
             <label for="comprador">Comprador</label>
-            <input type="text" class="form-control" name="comprador" id="comprador" value="{{$colhei->comprador}}" placeholder="Comprador">
+            <input type="text" class="form-control" name="comprador" id="comprador" value="{{$colhe->comprador}}" placeholder="Comprador">
         </div>
         <div class="form-group">
             <label for="date">Data</label>
-            <input type="password" class="form-control" name="date" id="date" value="{{$colhei->date}}" placeholder="Data">
+            <input type="text" class="form-control" name="date" id="date" value="{{$colhe->date}}" placeholder="Data">
         </div>
 
         <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>

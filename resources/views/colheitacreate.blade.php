@@ -39,7 +39,7 @@
         </div>
         <div class="form-group">
             <label for="date">Data</label>
-            <input type="password" class="form-control" name="date" id="date" placeholder="Data">
+            <input type="text" class="form-control" name="date" id="date" placeholder="Data">
         </div>
 
         <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>

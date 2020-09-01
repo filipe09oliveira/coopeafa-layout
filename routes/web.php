@@ -49,7 +49,7 @@ Route::get('/agrotoxico/edit/{id}', 'AgrotoxicosController@edit');
 Route::post('/agrotoxico/{id}', 'AgrotoxicosController@agrotoxicoupdate');
 
 
-Route::get('/colheitas', 'ColheitasController@colheitasindex');
+Route::get('/colheitas', 'ColheitasController@colheitaindex');
 Route::get('/colheita/create', 'ColheitasController@create');
 Route::post('/colheitas', 'ColheitasController@colheitastore');
 Route::get('/colheita/delete/{id}', 'ColheitasController@destroy');

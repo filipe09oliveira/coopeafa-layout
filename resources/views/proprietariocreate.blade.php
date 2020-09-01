@@ -7,42 +7,88 @@
 
     <hr class="sidebar-divider">
 
-    <form action="/proprietarios" method="POST">
+    <form class="needs-validation" action="/proprietarios" method="POST" novalidate>
         @csrf
-        <div class="form-group">
-            <label for="name">Nome do Proprietario</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Proprietario">
-        </div>
-        <div class="form-group">
-            <label for="surname">Sobrenome</label>
-            <input type="text" class="form-control" name="surname" id="surname" placeholder="Sobrenome">
-        </div>
-        <div class="form-group">
-            <label for="cpf">CPF</label>
-            <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF">
-        </div>
-        <div class="form-group">
-            <label for="date">Data</label>
-            <input type="text" class="form-control" name="date" id="date" placeholder="Data">
-        </div>
-        <div class="form-group">
-            <label for="numeroDAP">Numero do DAP</label>
-            <input type="text" class="form-control" name="numeroDAP" id="numeroDAP" placeholder="DAP">
-        </div>
-        <div class="form-group">
-            <label for="validadeDAP">Validade DAP</label>
-            <input type="text" class="form-control" name="validadeDAP" id="validadeDAP" placeholder="Validade DAP">
-        </div>
-        <div class="form-group">
-            <label for="registro">Registro</label>
-            <input type="text" class="form-control" name="registro" id="registro" placeholder="Registro">
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Nome"
+                       required>
+                <div class="invalid-feedback">
+                    Por favor, escolha um nome.
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="surname">Sobrenome</label>
+                <input type="text" class="form-control form-control-sm" name="surname" id="surname"
+                       placeholder="Sobrenome" required>
+                <div class="invalid-feedback">
+                    Por favor, escolha um sobrenome.
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Senha">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control form-control-sm" name="cpf" id="cpf" placeholder="CPF" required>
+                <div class="invalid-feedback">
+                    CPF invalido ou não inserido.
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="registro">Registro</label>
+                <input type="text" class="form-control form-control-sm" name="registro" id="registro"
+                       placeholder="Registro" required>
+                <div class="invalid-feedback">
+                    Por favor, escolha um registro.
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="numeroDAP">Numero do DAP</label>
+                <input type="text" class="form-control form-control-sm" name="numeroDAP" id="numeroDAP"
+                       placeholder="DAP" required>
+                <div class="invalid-feedback">
+                    Por favor, escolha um numero do DAP.
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="validadeDAP">Validade DAP</label>
+                <input type="text" class="form-control form-control-sm" name="validadeDAP" id="validadeDAP"
+                       placeholder="Validade DAP" required>
+                <div class="invalid-feedback">
+                    Por favor, escolha a validade do DAP.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="date">Data</label>
+                <input type="text" class="form-control form-control-sm" name="date" id="date" placeholder="Data"
+                       required>
+                <div class="invalid-feedback">
+                    Por favor, escolha uma data.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control form-control-sm" name="password" id="password"
+                       placeholder="Senha" required>
+                <small id="passwordHelpInline" class="text-muted">
+                    Deve ter entre 8 e 20 caracteres.
+                </small>
+                <div class="invalid-feedback">
+                    Senha invalida ou não inserida.
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm"> Cadastrar</button>
         <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>
     </form>
 

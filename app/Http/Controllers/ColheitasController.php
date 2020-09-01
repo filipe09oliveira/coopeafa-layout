@@ -66,15 +66,15 @@ class ColheitasController extends Controller
 
 
     // CONTROLLERS DA APLICAÇÃO WEB //
-    public function colheitasindex()
+    public function colheitaindex()
     {
-        $colhei = Colheitas::all();
-        return view('colheitas', compact('colhei'));
+        $colhe = Colheitas::all();
+        return view('colheitas', compact('colhe'));
     }
 
     public function create()
     {
-        return view('colheitas');
+        return view('colheitacreate');
     }
 
     /**
@@ -85,16 +85,16 @@ class ColheitasController extends Controller
      */
     public function colheitastore(Request $request)
     {
-        $colhei = new Colheitas();
-        $colhei->produto           = $request->input('produto');
-        $colhei->unidade           = $request->input('unidade');
-        $colhei->date              = $request->input('date');
-        $colhei->peso              = $request->input('peso');
-        $colhei->quantidade        = $request->input('quantidade');
-        $colhei->perda             = $request->input('perda');
-        $colhei->transportador     = $request->input('transportador');
-        $colhei->comprador         = $request->input('comprador');
-        $colhei->save();
+        $colhe = new Colheitas();
+        $colhe->produto           = $request->input('produto');
+        $colhe->unidade           = $request->input('unidade');
+        $colhe->date              = $request->input('date');
+        $colhe->peso              = $request->input('peso');
+        $colhe->quantidade        = $request->input('quantidade');
+        $colhe->perda             = $request->input('perda');
+        $colhe->transportador     = $request->input('transportador');
+        $colhe->comprador         = $request->input('comprador');
+        $colhe->save();
         return redirect('/colheitas');
     }
 
@@ -106,9 +106,9 @@ class ColheitasController extends Controller
      */
     public function edit($id)
     {
-        $colhei = Colheitas::find($id);
-        if (isset($colhei)) {
-            return view('colheitaedit', compact('colhei'));
+        $colhe = Colheitas::find($id);
+        if (isset($colhe)) {
+            return view('colheitaedit', compact('colhe'));
         }
         return redirect('/colheitas');
     }
@@ -120,19 +120,19 @@ class ColheitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function culturaupdate(Request $request, $id)
+    public function colheitaupdate(Request $request, $id)
     {
-        $colhei = Colheitas::find($id);
-        if (isset($colhei)) {
-            $colhei->produto           = $request->input('produto');
-            $colhei->unidade           = $request->input('unidade');
-            $colhei->date              = $request->input('date');
-            $colhei->peso              = $request->input('peso');
-            $colhei->quantidade        = $request->input('quantidade');
-            $colhei->perda             = $request->input('perda');
-            $colhei->transportador     = $request->input('transportador');
-            $colhei->comprador         = $request->input('comprador');
-            $colhei->save();
+        $colhe = Colheitas::find($id);
+        if (isset($colhe)) {
+            $colhe->produto           = $request->input('produto');
+            $colhe->unidade           = $request->input('unidade');
+            $colhe->date              = $request->input('date');
+            $colhe->peso              = $request->input('peso');
+            $colhe->quantidade        = $request->input('quantidade');
+            $colhe->perda             = $request->input('perda');
+            $colhe->transportador     = $request->input('transportador');
+            $colhe->comprador         = $request->input('comprador');
+            $colhe->save();
         }
         return redirect('/colheitas');
     }
@@ -145,9 +145,9 @@ class ColheitasController extends Controller
      */
     public function destroy($id)
     {
-        $colhei = Colheitas::find($id);
-        if (isset($colhei)) {
-            $colhei->delete();
+        $colhe = Colheitas::find($id);
+        if (isset($colhe)) {
+            $colhe->delete();
         }
 
         return redirect('/colheitas');

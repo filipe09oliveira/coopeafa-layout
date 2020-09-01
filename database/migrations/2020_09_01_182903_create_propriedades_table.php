@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Propriedades extends Migration
+class CreatePropriedadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,6 +19,7 @@ class Propriedades extends Migration
             $table->string('tipo');
             $table->float('tamanho');
             $table->string('rua');
+            $table->string('cidade');
             $table->string('bairro');
             $table->string('cep');
             $table->integer('numero');
