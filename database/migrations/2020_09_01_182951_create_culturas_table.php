@@ -18,8 +18,8 @@ class CreateCulturasTable extends Migration
             $table->string('nome');
             $table->string('hectaries');
             $table->string('date');
-            $table->string('propriedade');
-            $table->date('colheita');
+            $table->integer('propriedade');
+            $table->integer('colheita');
             $table->timestamps();
         });
     }

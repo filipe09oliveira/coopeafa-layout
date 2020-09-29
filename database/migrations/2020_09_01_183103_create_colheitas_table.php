@@ -21,8 +21,8 @@ class CreateColheitasTable extends Migration
             $table->string('peso');
             $table->string('quantidade');
             $table->string('perda');
-            $table->string('transportador');
-            $table->string('comprador');
+            $table->integer('transportador');
+            $table->integer('comprador');
             $table->timestamps();
         });
     }

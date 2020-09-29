@@ -16,7 +16,7 @@ class CreatePropriedadesTable extends Migration
         Schema::create('propriedades', function (Blueprint $table) {
             $table->id();
             $table->string('cafir');
-            $table->string('tipo');
+            $table->integer('tipo');
             $table->float('tamanho');
             $table->string('rua');
             $table->string('cidade');

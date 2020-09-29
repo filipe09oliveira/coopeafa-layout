@@ -15,7 +15,7 @@ class CreateAgrotoxicosTable extends Migration
     {
         Schema::create('agrotoxicos', function (Blueprint $table) {
             $table->id();
-            $table->string('cultura');
+            $table->integer('cultura');
             $table->string('canteiro');
             $table->string('date');
             $table->string('produto');

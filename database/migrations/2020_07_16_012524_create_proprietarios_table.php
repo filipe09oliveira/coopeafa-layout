@@ -21,7 +21,7 @@ class CreateProprietariosTable extends Migration
             $table->string('date');
             $table->integer('numeroDAP');
             $table->string('validadeDAP');
-            $table->integer('registro');
+            $table->string('registro');
             $table->string('password');
             $table->timestamps();
         });

@@ -91,6 +91,7 @@ class PropriedadesController extends Controller
         $proprie->rua = $request->input('rua');
         $proprie->bairro = $request->input('bairro');
         $proprie->cep = $request->input('cep');
+        $proprie->cidade = $request->input('cidade');
         $proprie->numero = $request->input('numero');
         $proprie->complemento = $request->input('complemento');
         $proprie->contrato = $request->input('contrato');
@@ -130,6 +131,7 @@ class PropriedadesController extends Controller
             $proprie->rua = $request->input('rua');
             $proprie->bairro = $request->input('bairro');
             $proprie->cep = $request->input('cep');
+            $proprie->cidade = $request->input('cidade');
             $proprie->numero = $request->input('numero');
             $proprie->complemento = $request->input('complemento');
             $proprie->contrato = $request->input('contrato');
