@@ -65,16 +65,6 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-2">
-                <label for="date">Data</label>
-                <input type="text" class="form-control form-control-sm" name="date" id="date" placeholder="Data"
-                       required>
-                <div class="invalid-feedback">
-                    Por favor, escolha uma data.
-                </div>
-            </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="password">Senha</label>
                 <input type="password" class="form-control form-control-sm" name="password" id="password"

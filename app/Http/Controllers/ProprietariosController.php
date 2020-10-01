@@ -86,7 +86,6 @@ class ProprietariosController extends Controller
         $proprietarios->name = $request->input('name');
         $proprietarios->surname = $request->input('surname');
         $proprietarios->cpf = $request->input('cpf');
-        $proprietarios->date = $request->input('date');
         $proprietarios->numeroDAP = $request->input('numeroDAP');
         $proprietarios->validadeDAP = $request->input('validadeDAP');
         $proprietarios->registro = $request->input('registro');
@@ -124,7 +123,6 @@ class ProprietariosController extends Controller
             $proprietario->name = $request->input('name');
             $proprietario->surname = $request->input('surname');
             $proprietario->cpf = $request->input('cpf');
-            $proprietario->date = $request->input('date');
             $proprietario->numeroDAP = $request->input('numeroDAP');
             $proprietario->validadeDAP = $request->input('validadeDAP');
             $proprietario->registro = $request->input('registro');

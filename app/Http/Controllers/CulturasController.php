@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Colheitas;
 use Illuminate\Http\Request;
 use App\Culturas;
+use App\Propriedades;
 
 class CulturasController extends Controller
 {
@@ -64,7 +66,9 @@ class CulturasController extends Controller
 
     public function create()
     {
-        return view('culturacreate');
+        $propriedade = Propriedades::all();
+        $colheita = Colheitas::all();
+        return view('culturacreate', compact('propriedade', 'colheita'));
     }
 
     /**
@@ -78,9 +82,8 @@ class CulturasController extends Controller
         $cultura = new Culturas();
         $cultura->nome           = $request->input('nome');
         $cultura->hectaries      = $request->input('hectaries');
-        $cultura->date           = $request->input('date');
-        $cultura->propriedade    = $request->input('propriedade');
-        $cultura->colheita       = $request->input('colheita');
+        $cultura->propriedade_id = $request->input('propriedade_id');
+        $cultura->colheita_id    = $request->input('colheita_id');
         $cultura->save();
         return redirect('/culturas');
     }
@@ -94,8 +97,11 @@ class CulturasController extends Controller
     public function edit($id)
     {
         $cultura = Culturas::find($id);
+        $propriedade = Propriedades::all();
+        $colheita = Colheitas::all();
+
         if (isset($cultura)) {
-            return view('culturaedit', compact('cultura'));
+            return view('culturaedit', compact('cultura', 'propriedade', 'colheita'));
         }
         return redirect('/culturas');
     }
@@ -113,9 +119,8 @@ class CulturasController extends Controller
         if (isset($cultura)) {
             $cultura->nome           = $request->input('nome');
             $cultura->hectaries      = $request->input('hectaries');
-            $cultura->date           = $request->input('date');
-            $cultura->propriedade    = $request->input('propriedade');
-            $cultura->colheita       = $request->input('colheita');
+            $cultura->propriedade_id = $request->input('propriedade_id');
+            $cultura->colheita_id    = $request->input('colheita_id');
             $cultura->save();
         }
         return redirect('/culturas');

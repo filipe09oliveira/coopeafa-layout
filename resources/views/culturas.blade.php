@@ -31,8 +31,8 @@
                         <td>{{$culturas->id}}</td>
                         <td>{{$culturas->nome}}</td>
                         <td>{{$culturas->hectaries}}</td>
-                        <td>{{$culturas->propriedade}}</td>
-                        <td>{{$culturas->colheita}}</td>
+                        <td>{{$culturas->propriedade->cafir}}</td>
+                        <td>{{$culturas->colheita->id}}</td>
                         <td class="text-center">
                             <a href="/cultura/edit/{{$culturas->id}}" class="btn btn-sm btn-primary">Editar</a>
                             <a href="/cultura/delete/{{$culturas->id}}" class="btn btn-sm btn-danger">Excluir</a>

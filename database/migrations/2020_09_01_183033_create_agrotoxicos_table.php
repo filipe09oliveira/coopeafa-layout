@@ -15,16 +15,18 @@ class CreateAgrotoxicosTable extends Migration
     {
         Schema::create('agrotoxicos', function (Blueprint $table) {
             $table->id();
-            $table->integer('cultura');
+            $table->unsignedBigInteger('cultura_id');
+            $table->foreign('cultura_id')->references('id')->on('culturas');
+
             $table->string('canteiro');
-            $table->string('date');
             $table->string('produto');
             $table->string('aplicacao');
-            $table->string('dosagem');
-            $table->string('volume');
+            $table->decimal('dosagem');
+            $table->decimal('volume');
             $table->string('indicacao');
             $table->string('carencia');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

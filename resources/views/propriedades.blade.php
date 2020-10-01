@@ -33,7 +33,7 @@
                     <tr>
                         <td>{{$propries->id}}</td>
                         <td>{{$propries->cafir}}</td>
-                        <td>{{$propries->tipo}}</td>
+                        <td>{{$propries->tipo->descricao}}</td>
                         <td>{{$propries->tamanho}}</td>
                         <td>{{$propries->rua}}</td>
                         <td>{{$propries->bairro}}</td>

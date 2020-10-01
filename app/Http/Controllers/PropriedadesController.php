@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Propriedades;
+use App\TipoPropriedade;
 
 class PropriedadesController extends Controller
 {
@@ -20,7 +21,7 @@ class PropriedadesController extends Controller
     {
         $propriedades = new Propriedades();
         $propriedades->cafir             = $request->cafir;
-        $propriedades->tipo              = $request->tipo;
+        $propriedades->tipo_propriedade  = $request->tipo_propriedade;
         $propriedades->tamanho           = $request->tamanho;
         $propriedades->rua               = $request->rua;
         $propriedades->bairro            = $request->bairro;
@@ -39,7 +40,7 @@ class PropriedadesController extends Controller
     {
         $propriedades = Propriedades::findOrFail($id);
         $propriedades->cafir             = $request->cafir;
-        $propriedades->tipo              = $request->tipo;
+        $propriedades->tipo_propriedade  = $request->tipo_propriedade;
         $propriedades->tamanho           = $request->tamanho;
         $propriedades->rua               = $request->rua;
         $propriedades->bairro            = $request->bairro;
@@ -73,7 +74,8 @@ class PropriedadesController extends Controller
 
     public function create()
     {
-        return view('propriedadecreate');
+        $tipo = TipoPropriedade::all();
+        return view('propriedadecreate', compact('tipo'));
     }
 
     /**
@@ -86,7 +88,7 @@ class PropriedadesController extends Controller
     {
         $proprie = new Propriedades();
         $proprie->cafir = $request->input('cafir');
-        $proprie->tipo = $request->input('tipo');
+        $proprie->tipo_propriedade = $request->input('tipo_propriedade');
         $proprie->tamanho = $request->input('tamanho');
         $proprie->rua = $request->input('rua');
         $proprie->bairro = $request->input('bairro');
@@ -108,8 +110,9 @@ class PropriedadesController extends Controller
     public function edit($id)
     {
         $proprie = Propriedades::find($id);
+        $tipo = TipoPropriedade::all();
         if (isset($proprie)) {
-            return view('propriedadeedit', compact('proprie'));
+            return view('propriedadeedit', compact('proprie', 'tipo'));
         }
         return redirect('/propriedades');
     }
@@ -126,7 +129,7 @@ class PropriedadesController extends Controller
         $proprie = Propriedades::find($id);
         if (isset($proprie)) {
             $proprie->cafir = $request->input('cafir');
-            $proprie->tipo = $request->input('tipo');
+            $proprie->tipo_propriedade = $request->input('tipo_propriedade');
             $proprie->tamanho = $request->input('tamanho');
             $proprie->rua = $request->input('rua');
             $proprie->bairro = $request->input('bairro');

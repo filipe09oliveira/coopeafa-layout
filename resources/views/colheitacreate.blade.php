@@ -37,10 +37,6 @@
             <label for="comprador">Comprador</label>
             <input type="text" class="form-control" name="comprador" id="comprador" placeholder="Comprador">
         </div>
-        <div class="form-group">
-            <label for="date">Data</label>
-            <input type="text" class="form-control" name="date" id="date" placeholder="Data">
-        </div>
 
         <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>
         <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>

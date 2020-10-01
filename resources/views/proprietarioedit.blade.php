@@ -68,18 +68,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="form-row">
-            <div class="form-group">
-                <label for="date">Data</label>
-                <input type="text" class="form-control" name="date" id="date" value="{{$propri->date}}"
-                       placeholder="Data" required>
-                <div class="invalid-feedback">
-                    Por favor, escolha uma data.
-                </div>
-            </div>
-        </div>
-
         <button type="submit" class="btn btn-primary btn-sm"> Cadastrar</button>
         <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>
     </form>

@@ -16,8 +16,11 @@ class CreatePropriedadesTable extends Migration
         Schema::create('propriedades', function (Blueprint $table) {
             $table->id();
             $table->string('cafir');
-            $table->integer('tipo');
-            $table->float('tamanho');
+            
+            $table->unsignedBigInteger('tipo_propriedade');
+            $table->foreign('tipo_propriedade')->references('id')->on('tipo_propriedade');
+
+            $table->decimal('tamanho');
             $table->string('rua');
             $table->string('cidade');
             $table->string('bairro');
@@ -26,6 +29,8 @@ class CreatePropriedadesTable extends Migration
             $table->string('complemento');
             $table->string('contrato');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

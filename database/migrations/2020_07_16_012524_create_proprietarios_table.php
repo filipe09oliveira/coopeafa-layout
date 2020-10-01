@@ -18,12 +18,12 @@ class CreateProprietariosTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('cpf')->unique();
-            $table->string('date');
-            $table->integer('numeroDAP');
+            $table->integer('numeroDAP')->unique();
             $table->string('validadeDAP');
             $table->string('registro');
             $table->string('password');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

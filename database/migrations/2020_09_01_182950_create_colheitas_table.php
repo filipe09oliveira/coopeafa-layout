@@ -17,13 +17,13 @@ class CreateColheitasTable extends Migration
             $table->id();
             $table->string('produto');
             $table->string('unidade');
-            $table->string('date');
-            $table->string('peso');
-            $table->string('quantidade');
+            $table->decimal('peso');
+            $table->integer('quantidade');
             $table->string('perda');
             $table->integer('transportador');
             $table->integer('comprador');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

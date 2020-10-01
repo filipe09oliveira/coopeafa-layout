@@ -16,11 +16,16 @@ class CreateCulturasTable extends Migration
         Schema::create('culturas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('hectaries');
-            $table->string('date');
-            $table->integer('propriedade');
-            $table->integer('colheita');
+            $table->integer('hectaries');
+
+            $table->unsignedBigInteger('propriedade_id');
+            $table->foreign('propriedade_id')->references('id')->on('propriedades');
+
+            $table->unsignedBigInteger('colheita_id');
+            $table->foreign('colheita_id')->references('id')->on('colheitas');
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

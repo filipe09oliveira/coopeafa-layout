@@ -5,19 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Proprietarios extends Model
+class TipoPropriedade extends Model
 {
-
     use SoftDeletes;
-
+    
     protected $fillable = [
-        'name',
-        'surname',
-        'cpf',
-        'numeroDAP', 
-        'validadeDAP', 
-        'registro', 
-        'password'
+        'descricao'
     ];
 
     protected $guarded = [
@@ -27,5 +20,5 @@ class Proprietarios extends Model
         'deleted_at',
     ];
 
-    protected $table = 'proprietarios';
+    protected $table = 'tipo_propriedade';
 }

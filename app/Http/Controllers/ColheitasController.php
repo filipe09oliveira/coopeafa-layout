@@ -88,7 +88,6 @@ class ColheitasController extends Controller
         $colhe = new Colheitas();
         $colhe->produto           = $request->input('produto');
         $colhe->unidade           = $request->input('unidade');
-        $colhe->date              = $request->input('date');
         $colhe->peso              = $request->input('peso');
         $colhe->quantidade        = $request->input('quantidade');
         $colhe->perda             = $request->input('perda');
@@ -126,7 +125,6 @@ class ColheitasController extends Controller
         if (isset($colhe)) {
             $colhe->produto           = $request->input('produto');
             $colhe->unidade           = $request->input('unidade');
-            $colhe->date              = $request->input('date');
             $colhe->peso              = $request->input('peso');
             $colhe->quantidade        = $request->input('quantidade');
             $colhe->perda             = $request->input('perda');

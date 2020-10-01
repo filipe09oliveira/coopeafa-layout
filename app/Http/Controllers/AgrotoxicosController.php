@@ -88,7 +88,6 @@ class AgrotoxicosController extends Controller
         $agro = new Agrotoxicos();
         $agro->cultura        = $request->input('cultura');
         $agro->canteiro       = $request->input('canteiro');
-        $agro->date           = $request->input('date');
         $agro->produto        = $request->input('produto');
         $agro->aplicacao      = $request->input('aplicacao');
         $agro->dosagem        = $request->input('dosagem');
@@ -127,7 +126,6 @@ class AgrotoxicosController extends Controller
         if (isset($agro)) {
             $agro->cultura        = $request->input('cultura');
             $agro->canteiro       = $request->input('canteiro');
-            $agro->date           = $request->input('date');
             $agro->produto        = $request->input('produto');
             $agro->aplicacao      = $request->input('aplicacao');
             $agro->dosagem        = $request->input('dosagem');
