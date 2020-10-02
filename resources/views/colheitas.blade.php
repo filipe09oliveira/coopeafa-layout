@@ -40,8 +40,8 @@
                         <td>{{$colhes->transportador}}</td>
                         <td>{{$colhes->comprador}}</td>
                         <td class="text-center">
-                            <a href="/colheita/edit/{{$colhes->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/colheita/delete/{{$colhes->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/colheita/edit/{{$colhes->id}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/colheita/delete/{{$colhes->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach

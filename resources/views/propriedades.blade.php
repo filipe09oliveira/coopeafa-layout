@@ -40,8 +40,8 @@
                         <td>{{$propries->numero}}</td>
                         <td>{{$propries->contrato}}</td>
                         <td class="text-center">
-                            <a href="/propriedade/edit/{{$propries->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/propriedade/delete/{{$propries->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/propriedade/edit/{{$propries->id}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/propriedade/delete/{{$propries->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Agrotoxicos;
+use App\Culturas;
 
 class AgrotoxicosController extends Controller
 {
@@ -74,7 +75,8 @@ class AgrotoxicosController extends Controller
 
     public function create()
     {
-        return view('agrotoxicocreate');
+        $cultura = Culturas::all();
+        return view('agrotoxicocreate', compact('cultura'));
     }
 
     /**
@@ -86,7 +88,7 @@ class AgrotoxicosController extends Controller
     public function agrotoxicostore(Request $request)
     {
         $agro = new Agrotoxicos();
-        $agro->cultura        = $request->input('cultura');
+        $agro->cultura_id     = $request->input('cultura_id');
         $agro->canteiro       = $request->input('canteiro');
         $agro->produto        = $request->input('produto');
         $agro->aplicacao      = $request->input('aplicacao');
@@ -107,8 +109,9 @@ class AgrotoxicosController extends Controller
     public function edit($id)
     {
         $agro = Agrotoxicos::find($id);
+        $cultura = Culturas::all();
         if (isset($agro)) {
-            return view('agrotoxicoedit', compact('agro'));
+            return view('agrotoxicoedit', compact('agro', 'cultura'));
         }
         return redirect('/agrotoxicos');
     }
@@ -124,7 +127,7 @@ class AgrotoxicosController extends Controller
     {
         $agro = Agrotoxicos::find($id);
         if (isset($agro)) {
-            $agro->cultura        = $request->input('cultura');
+            $agro->cultura_id     = $request->input('cultura_id');
             $agro->canteiro       = $request->input('canteiro');
             $agro->produto        = $request->input('produto');
             $agro->aplicacao      = $request->input('aplicacao');

@@ -36,8 +36,8 @@
                         <td>{{$propris->validadeDAP}}</td>
                         <td>{{$propris->registro}}</td>
                         <td class="text-center">
-                            <a href="/proprietario/edit/{{$propris->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/proprietario/delete/{{$propris->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/proprietario/edit/{{$propris->id}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/proprietario/delete/{{$propris->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach

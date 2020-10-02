@@ -8,45 +8,77 @@
 
     <hr class="sidebar-divider">
 
-    <form action="/agrotoxico/{{$agro->id}}" method="POST">
+    <form class="needs-validation" action="/agrotoxico/{{$agro->id}}" method="POST" novalidate>
         @csrf
-        <div class="form-group">
-            <label for="cultura">Cultura</label>
-            <input type="text" class="form-control" name="cultura" id="cultura" value="{{$agro->cultura}}" placeholder="Nome Cultura">
+        <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="cultura_id">Cultura</label>
+            <select class="custom-select custom-select-sm mb-3" id="cultura_id" name="cultura_id" required>
+                <option value="" selected></option>
+                @foreach($cultura as $culturas)
+                <option value="{{$culturas->id}}" {{$agro->cultura_id == $culturas->id ? 'selected' : ''}}>{{$culturas->nome}}</option>
+                @endforeach
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecione uma cultura.
+            </div>
         </div>
-        <div class="form-group">
-            <label for="canteiro">Canteiros</label>
-            <input type="text" class="form-control" name="canteiro" id="canteiro" value="{{$agro->canteiro}}"  placeholder="Canteiros">
+        <div class="form-group col-md-4">
+            <label for="canteiro">Canteiro</label>
+            <input type="text" class="form-control form-control-sm" name="canteiro" id="canteiro" value="{{$agro->canteiro}}" placeholder="Canteiros" required>
+            <div class="invalid-feedback">
+                Por favor, informe um canteiro.
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-3">
             <label for="produto">Produto</label>
-            <input type="text" class="form-control" name="produto" id="produto" value="{{$agro->produto}}"  placeholder="Produto">
+            <input type="text" class="form-control form-control-sm" name="produto" id="produto" value="{{$agro->produto}}" placeholder="Produto" required>
+            <div class="invalid-feedback">
+                Por favor, informe um produto.
+            </div>
         </div>
-        <div class="form-group">
-            <label for="aplicacao">Aplicação</label>
-            <input type="text" class="form-control" name="aplicacao" id="aplicacao" value="{{$agro->aplicacao}}"  placeholder="Aplicação">
-        </div>
-        <div class="form-group">
-            <label for="dosagem">Dosagem</label>
-            <input type="text" class="form-control" name="dosagem" id="dosagem" value="{{$agro->dosagem}}"  placeholder="Dosagem">
-        </div>
-        <div class="form-group">
-            <label for="volume">Volume</label>
-            <input type="text" class="form-control" name="volume" id="volume" value="{{$agro->volume}}"  placeholder="Volume">
-        </div>
-        <div class="form-group">
-            <label for="indicacao">Indicação</label>
-            <input type="text" class="form-control" name="indicacao" id="indicacao" value="{{$agro->indicacao}}"  placeholder="Indicação">
-        </div>
-        <div class="form-group">
-            <label for="carencia">Carencia</label>
-            <input type="text" class="form-control" name="carencia" id="carencia" value="{{$agro->carencia}}"  placeholder="Carencia">
-        </div>
-        <div class="form-group">
-            <label for="date">Data</label>
-            <input type="text" class="form-control" name="date" id="date" value="{{$agro->date}}"  placeholder="Data">
-        </div>
+    </div>
 
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="aplicacao">Aplicação</label>
+            <input type="text" class="form-control form-control-sm" name="aplicacao" id="aplicacao" value="{{$agro->aplicacao}}" placeholder="Aplicação" required>
+            <div class="invalid-feedback">
+                Por favor, informe a aplicação.
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="dosagem">Dosagem</label>
+            <input type="number" min="1" class="form-control form-control-sm" name="dosagem" id="dosagem" value="{{$agro->dosagem}}" placeholder="Dosagem" required>
+            <div class="invalid-feedback">
+                Por favor, informe a dosagem.
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="volume">Volume</label>
+            <input type="number" min="1" class="form-control form-control-sm" name="volume" id="volume" value="{{$agro->dosagem}}" placeholder="Volume" required>
+            <div class="invalid-feedback">
+                Por favor, informe o volume.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="indicacao">Indicação</label>
+            <input type="text" class="form-control form-control-sm" name="indicacao" id="indicacao" value="{{$agro->indicacao}}" placeholder="Indicação" required>
+            <div class="invalid-feedback">
+                Por favor, informe a indicação.
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="carencia">Carencia</label>
+            <input type="text" class="form-control form-control-sm" name="carencia" id="carencia" value="{{$agro->carencia}}" placeholder="Carencia" required>
+            <div class="invalid-feedback">
+                Por favor, informe a carencia.
+            </div>
+        </div>
+    </div>
         <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>
         <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>
     </form>

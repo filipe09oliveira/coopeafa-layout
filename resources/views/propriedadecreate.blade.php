@@ -28,16 +28,15 @@
         </div>
         <div class="form-group col-md-3">
             <label for="tipo_propriedade">Tipo</label>
-            <select class="custom-select custom-select-sm mb-3" id="tipo_propriedade" name="tipo_propriedade">
-                @if($tipo->count() > 0)
+            <select class="custom-select custom-select-sm mb-3" id="tipo_propriedade" name="tipo_propriedade" required>
                 <option value="" selected></option>
                 @foreach($tipo as $tipos)
                 <option value="{{$tipos->id}}">{{$tipos->descricao}}</option>
                 @endforeach
-                @else
-                Tipo Não cadastrado
-                @endif
             </select>
+            <div class="invalid-feedback">
+                Por favor, selecione uma tipo.
+            </div>
         </div>
     </div>
 

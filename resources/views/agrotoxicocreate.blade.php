@@ -1,54 +1,89 @@
 @extends('layout.app')
 
 @section('body')
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Cadastro de Agrotoxicos</h1>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cadastro de Agrotoxicos</h1>
+</div>
+
+<hr class="sidebar-divider">
+
+<form class="needs-validation" action="/agrotoxicos" method="POST" novalidate>
+    @csrf
+
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="cultura_id">Cultura</label>
+            <select class="custom-select custom-select-sm mb-3" id="cultura_id" name="cultura_id" required>
+                <option value="" selected></option>
+                @foreach($cultura as $culturas)
+                <option value="{{$culturas->id}}">{{$culturas->nome}}</option>
+                @endforeach
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecione uma cultura.
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="canteiro">Canteiro</label>
+            <input type="text" class="form-control form-control-sm" name="canteiro" id="canteiro" placeholder="Canteiros" required>
+            <div class="invalid-feedback">
+                Por favor, informe um canteiro.
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="produto">Produto</label>
+            <input type="text" class="form-control form-control-sm" name="produto" id="produto" placeholder="Produto" required>
+            <div class="invalid-feedback">
+                Por favor, informe um produto.
+            </div>
+        </div>
     </div>
 
-    <hr class="sidebar-divider">
-
-    <form action="/agrotoxicos" method="POST">
-        @csrf
-        <div class="form-group">
-            <label for="cultura">Cultura</label>
-            <input type="text" class="form-control" name="cultura" id="cultura" placeholder="Nome Cultura">
-        </div>
-        <div class="form-group">
-            <label for="canteiro">Canteiros</label>
-            <input type="text" class="form-control" name="canteiro" id="canteiro" placeholder="Canteiros">
-        </div>
-        <div class="form-group">
-            <label for="produto">Produto</label>
-            <input type="text" class="form-control" name="produto" id="produto" placeholder="Produto">
-        </div>
-        <div class="form-group">
+    <div class="form-row">
+        <div class="form-group col-md-6">
             <label for="aplicacao">Aplicação</label>
-            <input type="text" class="form-control" name="aplicacao" id="aplicacao" placeholder="Aplicação">
+            <input type="text" class="form-control form-control-sm" name="aplicacao" id="aplicacao" placeholder="Aplicação" required>
+            <div class="invalid-feedback">
+                Por favor, informe a aplicação.
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-3">
             <label for="dosagem">Dosagem</label>
-            <input type="text" class="form-control" name="dosagem" id="dosagem" placeholder="Dosagem">
+            <input type="number" min="1" class="form-control form-control-sm" name="dosagem" id="dosagem" placeholder="Dosagem" required>
+            <div class="invalid-feedback">
+                Por favor, informe a dosagem.
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-3">
             <label for="volume">Volume</label>
-            <input type="text" class="form-control" name="volume" id="volume" placeholder="Volume">
+            <input type="number" min="1" class="form-control form-control-sm" name="volume" id="volume" placeholder="Volume" required>
+            <div class="invalid-feedback">
+                Por favor, informe o volume.
+            </div>
         </div>
-        <div class="form-group">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
             <label for="indicacao">Indicação</label>
-            <input type="text" class="form-control" name="indicacao" id="indicacao" placeholder="Indicação">
+            <input type="text" class="form-control form-control-sm" name="indicacao" id="indicacao" placeholder="Indicação" required>
+            <div class="invalid-feedback">
+                Por favor, informe a indicação.
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
             <label for="carencia">Carencia</label>
-            <input type="text" class="form-control" name="carencia" id="carencia" placeholder="Carencia">
+            <input type="text" class="form-control form-control-sm" name="carencia" id="carencia" placeholder="Carencia" required>
+            <div class="invalid-feedback">
+                Por favor, informe a carencia.
+            </div>
         </div>
-        <div class="form-group">
-            <label for="date">Data</label>
-            <input type="text" class="form-control" name="date" id="date" placeholder="Data">
-        </div>
+    </div>
 
 
-        <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>
-        <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>
-    </form>
+
+    <button type="submit" class="btn btn-primary btn-sm"> Cadastrar </button>
+    <button type="cancel" class="btn btn-danger btn-sm"> Cancelar</button>
+</form>
 
 @endsection

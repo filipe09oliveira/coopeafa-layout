@@ -10,7 +10,7 @@ class Agrotoxicos extends Model
     use SoftDeletes;
     
     protected $fillable = [
-        'cultura',
+        'cultura_id',
         'canteiro',
         'date',
         'produto',

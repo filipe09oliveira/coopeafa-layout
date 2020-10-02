@@ -34,8 +34,8 @@
                         <td>{{$culturas->propriedade->cafir}}</td>
                         <td>{{$culturas->colheita->id}}</td>
                         <td class="text-center">
-                            <a href="/cultura/edit/{{$culturas->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/cultura/delete/{{$culturas->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/cultura/edit/{{$culturas->id}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/cultura/delete/{{$culturas->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach

@@ -40,8 +40,8 @@
                         <td>{{$agros->aplicacao}}</td>
                         <td>{{$agros->volume}}</td>
                         <td class="text-center">
-                            <a href="/agrotoxico/edit/{{$agros->id}}" class="btn btn-sm btn-primary">Editar</a>
-                            <a href="/agrotoxico/delete/{{$agros->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                            <a href="/agrotoxico/edit/{{$agros->id}}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/agrotoxico/delete/{{$agros->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 @endforeach
