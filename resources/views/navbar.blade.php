@@ -42,7 +42,10 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Cadastros Diversos:</h6>
-                <a class="collapse-item" href="tipoColheitas">Tipo Propriedade</a>
+                <a class="collapse-item" href="produtos">Produtos</a>
+                <a class="collapse-item" href="transportadora">Transportadora</a>
+                <a class="collapse-item" href="clientes">Clientes</a>
+                <a class="collapse-item" href="/tipoPropriedades">Tipo Propriedade</a>
             </div>
         </div>
     </li>

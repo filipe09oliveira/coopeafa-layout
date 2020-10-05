@@ -55,3 +55,11 @@ Route::post('/colheitas', 'ColheitasController@colheitastore');
 Route::get('/colheita/delete/{id}', 'ColheitasController@destroy');
 Route::get('/colheita/edit/{id}', 'ColheitasController@edit');
 Route::post('/colheita/{id}', 'ColheitasController@colheitaupdate');
+
+
+Route::get('/tipoPropriedades', 'TipoPropriedadeController@tipoPropriedadeindex');
+Route::get('/tipoPropriedade/create', 'TipoPropriedadeController@create');
+Route::post('/tipoPropriedades', 'TipoPropriedadeController@tipoPropriedadestore');
+Route::get('/tipoPropriedade/delete/{id}', 'TipoPropriedadeController@destroy');
+Route::get('/tipoPropriedade/edit/{id}', 'TipoPropriedadeController@edit');
+Route::post('/tipoPropriedade/{id}', 'TipoPropriedadeController@tipoPropriedadeupdate');
