@@ -63,3 +63,10 @@ Route::post('/tipoPropriedades', 'TipoPropriedadeController@tipoPropriedadestore
 Route::get('/tipoPropriedade/delete/{id}', 'TipoPropriedadeController@destroy');
 Route::get('/tipoPropriedade/edit/{id}', 'TipoPropriedadeController@edit');
 Route::post('/tipoPropriedade/{id}', 'TipoPropriedadeController@tipoPropriedadeupdate');
+
+Route::get('/transportadoras', 'TransportadoraController@transportadoraindex');
+Route::get('/transportadora/create', 'TransportadoraController@create');
+Route::post('/transportadoras', 'TransportadoraController@transportadorastore');
+Route::get('/transportadora/delete/{id}', 'TransportadoraController@destroy');
+Route::get('/transportadora/edit/{id}', 'TransportadoraController@edit');
+Route::post('/transportadora/{id}', 'TransportadoraController@transportadoraupdate');

@@ -22,7 +22,7 @@ class TipoPropriedadeController extends Controller
     public function store(Request $request)
     {
         $tipoPropriedade = new TipoPropriedade();
-        $tipoPropriedade->descricao     = $request->descricao;
+        $tipoPropriedade->descricao = $request->descricao;
         $tipoPropriedade->save();
         return response()->json([
             'res' => 'Criado com sucesso'
@@ -33,7 +33,7 @@ class TipoPropriedadeController extends Controller
     public function update(Request $request, $id)
     {
         $tipoPropriedade = TipoPropriedade::findOrFail($id);
-        $tipoPropriedade->descricao     = $request->descricao;
+        $tipoPropriedade->descricao = $request->descricao;
         $tipoPropriedade->save();
         return response()->json([
             'res' => 'Alterado com sucesso'
@@ -52,7 +52,7 @@ class TipoPropriedadeController extends Controller
 
 
 
-    // CONTROLLERS DA APLICAÇÃO WEB //
+///////// CONTROLLERS DA APLICAÇÃO WEB /////////
     public function tipoPropriedadeindex()
     {
         $tipoPropriedade = TipoPropriedade::all();
